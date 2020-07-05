@@ -6,7 +6,7 @@ This is an ecommerce project built using Django, HTML, CSS and bootstrap.
 
 Home Page (Top):
 
-<img src="/app-images/home-top-img.png" width="400" height="160">
+<img src="/app-images/home-top-img.png" width="600" height="360">
 
 
 Home Page (Bottom):
@@ -39,10 +39,15 @@ To exhibit the minimalistic aspect of the website, I made the side navbar slidab
 
 In addition, for cases where the products are on sale, new, on popular demand or has free shipping, there are also appropriate labels to deliver a relevant sense of urgency to purchase the product.
 
-Finally, for additional security
+Finally, for additional security, I added an authentication feature that requires users to sign in / sign up using their username and password before they can add products to cart.
 
 
-## Getting started
+## Future Plans
+
+1. By tracking the number of times of times the user clicked on a product, I am planning to track and recommend the potential products which he/she is highly likely to buy. This can also be used to tabulate sales statistics.
+
+2. I am planning to add a feature which allows the user to suggest similar items from a picture of a product that the user wants.
+
 
 <!-- Steps:
 
