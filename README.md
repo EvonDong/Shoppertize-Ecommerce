@@ -5,29 +5,31 @@
 This is an ecommerce project built using Django, HTML, CSS and bootstrap. 
 
 Home Page (Top):
-![Home Page - Top](/app-images/home-top-img.png) <br> 
+
+<img src="/app-images/home-top-img.png" width="400" height="160">
+
 
 Home Page (Bottom):
 
-<img src="/app-images/home-bottom-img.png" width="150" height="20">
+<img src="/app-images/home-bottom-img.png" width="400" height="160">
 
 <br>
 
 Product Page:
 
-<img src="/app-images/product-img.png" width="150" height="20">
+<img src="/app-images/product-img.png" width="400" height="160">
 
 Bestseller Page:
 
-<img src="/app-images/bestseller-img.png" width="150" height="20">
+<img src="/app-images/bestseller-img.png" width="400" height="160">
 
 Order Summary Page:
 
-<img src="/app-images/order-summary-img.png" width="150" height="20">
+<img src="/app-images/order-summary-img.png" width="400" height="170">
 
 Checkout Page:
 
-<img src="/app-images/checkout-img.png" width="150" height="20">
+<img src="/app-images/checkout-img.png" width="400" height="170">
 
 ## Features
 
