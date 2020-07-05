@@ -1,4 +1,15 @@
-# Django Project Boilerplate
+# Paradise Shop - Django Ecommerce Project
+
+## About
+
+This is an ecommerce project built using Django, HTML, CSS and bootstrap. 
+
+![Home Page - Top](/app-images/home-top-img.png)
+![Home Page - Bottom](/app-images/home-bottom-img.png)
+![BestSeller Page - Top](/app-images/bestseller-img.png)
+![Order Summary Page - Top](/app-images/order-summary-img.png)
+![checkout Page - Top](/app-images/checkout-img.png)
+
 
 
 
