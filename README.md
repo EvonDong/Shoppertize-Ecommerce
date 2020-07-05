@@ -2,7 +2,7 @@
 
 ## About
 
-This is an ecommerce project built using Django, HTML, CSS and bootstrap. 
+This is an ecommerce website built using ***Django, SQLite, HTML, CSS and bootstrap***. 
 
 Home Page (Top):
 
@@ -37,7 +37,7 @@ This e-commerce responsive website has a very stylish design with a key aim to p
 
 To exhibit the minimalistic aspect of the website, I made the side navbar slidable such that the website only emphasises on the important details. 
 
-In addition, for cases where the products are on sale, new, on popular demand or has free shipping, there are also appropriate labels to deliver a relevant sense of urgency to purchase the product.
+In addition, for products that are on sale, new, on popular demand or has free shipping, there are appropriate labels to deliver a relevant sense of urgency to purchase the product.
 
 Finally, for additional security, I added an authentication feature that requires users to sign in / sign up using their username and password before they can add products to cart.
 
