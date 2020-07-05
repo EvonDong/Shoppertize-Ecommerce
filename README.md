@@ -11,25 +11,25 @@ Home Page (Top):
 
 Home Page (Bottom):
 
-<img src="/app-images/home-bottom-img.png" width="400" height="160">
+<img src="/app-images/home-bottom-img.png" width="600" height="360">
 
 <br>
 
 Product Page:
 
-<img src="/app-images/product-img.png" width="400" height="160">
+<img src="/app-images/product-img.png" width="600" height="360">
 
 Bestseller Page:
 
-<img src="/app-images/bestseller-img.png" width="400" height="160">
+<img src="/app-images/bestseller-img.png" width="600" height="360">
 
 Order Summary Page:
 
-<img src="/app-images/order-summary-img.png" width="400" height="170">
+<img src="/app-images/order-summary-img.png" width="600" height="360">
 
 Checkout Page:
 
-<img src="/app-images/checkout-img.png" width="400" height="170">
+<img src="/app-images/checkout-img.png" width="600" height="360">
 
 ## Features
 
