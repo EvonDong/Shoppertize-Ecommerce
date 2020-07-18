@@ -54,7 +54,7 @@ class HomeView(ListView):
 
 class BestSellerView(ListView):
     model = Item
-    paginate_by = 6
+    paginate_by = 1
     template_name = "bestseller.html"
     
     def get_context_data(self, **kwargs):
