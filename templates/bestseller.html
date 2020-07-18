@@ -28,28 +28,18 @@
                 <span class="sr-only">(current)</span>
               </a>
             </li>
+            {% for category in categories %}
             <li class="nav-item">
-              <a class="nav-link" href="#">Shirt</a>
+              <a class="nav-link" href="#">{{ category.1 }}</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Bottom</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sport wears</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Outerwear</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Accessories</a>
-            </li>
+            {% endfor %}
 
           </ul>
           <!-- Links -->
 
-          <form class="form-inline">
+          <form class="form-inline" action="/search/">
             <div class="md-form my-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+              <input class="form-control mr-sm-2" type="text" name="q" id="q" placeholder="Search" aria-label="Search">
             </div>
           </form>
         </div>
@@ -74,8 +64,9 @@
 
               <!--Card image-->
               <div class="view overlay">
-                <img src="{{ item.image }}" style="width:240px;height:270px;" class="card-img-top"
-                  alt="">
+                {% comment %} <img src="{{ item.image }}" style="width:240px;height:270px;" class="card-img-top"
+                  alt=""> {% endcomment %}
+                  <img src="{{ item.image.url }}" style="width:230px;height:250px;" class="card-img-top">
                 <a href="{{ item.get_absolute_url }}">
                   <div class="mask rgba-white-slight"></div>
                 </a>
@@ -140,23 +131,19 @@
           </li>
           {% endif %}
 
-          <li class="page-item active">
-            <a class="page-link" href="?page={{ page_obj.number }}">{{ page_obj.number }}
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">2</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">3</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">4</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">5</a>
-          </li>
+          {% for num in page_obj.paginator.page_range %}
+            {% if page_obj.number == num %}
+            <li class="page-item active">
+              <a class="page-link" href="?page={{ page_obj.number }}">{{ page_obj.number }}
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            {% elif num > page_obj.number|add:"-3" and num < page_obj.number|add:"3" %}
+              <li class="page-item">
+                <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+              </li>
+            {% endif %}
+          {% endfor %} 
   
           {% if page_obj.has_next %}
           <li class="page-item">

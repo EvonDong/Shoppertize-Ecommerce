@@ -128,10 +128,11 @@
           </ul>
           <!-- Links -->
 
-          <form class="form-inline">
+          <form class="form-inline" action="/search/">
             <div class="md-form my-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+              <input class="form-control mr-sm-2" type="text" name="q" id="q" placeholder="Search" aria-label="Search">
             </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
           </form>
         </div>
         <!-- Collapsible content -->
@@ -156,8 +157,9 @@
 
               <!--Card image-->
               <div class="view overlay">
-                <img src="{{ item.image }}" style="width:230px;height:250px;" class="card-img-top"
-                  alt="">
+                {% comment %} <img src="{{ item.image }}" style="width:230px;height:250px;" class="card-img-top"
+                  alt=""> {% endcomment %}
+                  <img src="{{ item.image.url }}" style="width:230px;height:250px;" class="card-img-top">
                 <a href="{{ item.get_absolute_url }}">
                   <div class="mask rgba-white-slight"></div>
                 </a>
@@ -222,23 +224,43 @@
           </li>
           {% endif %}
 
+          {% for num in page_obj.paginator.page_range %}
+            {% if page_obj.number == num %}
+            <li class="page-item active">
+              <a class="page-link" href="?page={{ page_obj.number }}">{{ page_obj.number }}
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            {% elif num > page_obj.number|add:"-3" and num < page_obj.number|add:"3" %}
+              <li class="page-item">
+                <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+              </li>
+            {% endif %}
+          {% endfor %} 
+
+{% comment %} get_paginator {% endcomment %}
+
+          {% comment %} {% if page_obj.has_previous %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a>
+          </li>
+          {% endif %}
+
           <li class="page-item active">
             <a class="page-link" href="?page={{ page_obj.number }}">{{ page_obj.number }}
               <span class="sr-only">(current)</span>
             </a>
-          </li>
+          </li> {% endcomment %}
+
+          {% comment %} {% for page_obj in object_list %}
           <li class="page-item">
-            <a class="page-link" href="#">2</a>
+            <a class="page-link" href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a>
           </li>
-          <li class="page-item">
+          {% endfor %} {% endcomment %}
+
+          {% comment %} <li class="page-item">
             <a class="page-link" href="#">3</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">4</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">5</a>
-          </li>
+          </li>  {% endcomment %}
   
           {% if page_obj.has_next %}
           <li class="page-item">
@@ -262,3 +284,18 @@
 </main>
 
 {% endblock content %}
+
+
+{% comment %} {% block extra_scripts %}
+<script>
+
+var to_next_page = document.querySelector("input[name=to_next_page]")
+
+to_next_page.addEventListener('click', function(event) {
+  event.preventDefault();
+  page_obj.has_previous = True;
+})
+
+
+</script>
+{% endblock extra_scripts  %} {% endcomment %}
