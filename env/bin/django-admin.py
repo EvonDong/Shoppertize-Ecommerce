@@ -1,4 +1,4 @@
-#!/Users/evondong/Documents/workspace/django_project_boilerplate/env/bin/python
+#!/Users/evondong/Documents/workspace/Paradise Ecommerce Shop/env/bin/python
 from django.core import management
 
 if __name__ == "__main__":

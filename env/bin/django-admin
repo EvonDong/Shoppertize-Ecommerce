@@ -1,4 +1,6 @@
-#!/Users/evondong/Documents/workspace/django_project_boilerplate/env/bin/python
+#!/bin/sh
+'''exec' "/Users/evondong/Documents/workspace/Paradise Ecommerce Shop/env/bin/python" "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys
