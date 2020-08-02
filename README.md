@@ -6,30 +6,30 @@ This is an ecommerce website built using ***Django, SQLite, HTML, CSS and bootst
 
 Home Page (Top):
 
-<img src="/app-images/home-top-img.png" width="600" height="360">
+<img src="/app-images/shoppertize-home-top.png" width="600" height="360">
 
 
 Home Page (Bottom):
 
-<img src="/app-images/home-bottom-img.png" width="600" height="360">
+<img src="/app-images/shoppertize-home-bottom.png" width="600" height="360">
 
 <br>
 
 Product Page:
 
-<img src="/app-images/product-img.png" width="600" height="360">
+<img src="/app-images/shoppertize-product-page.png" width="600" height="360">
 
 Bestseller Page:
 
-<img src="/app-images/bestseller-img.png" width="600" height="360">
+<img src="/app-images/shoppertize-bestseller.png" width="600" height="360">
 
 Order Summary Page:
 
-<img src="/app-images/order-summary-img.png" width="600" height="360">
+<img src="/app-images/shoppertize-order-summary.png" width="600" height="360">
 
 Checkout Page:
 
-<img src="/app-images/checkout-img.png" width="600" height="360">
+<img src="/app-images/shoppertize-checkout.png" width="600" height="360">
 
 ## Features
 
