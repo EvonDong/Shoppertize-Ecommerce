@@ -36,7 +36,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware'
 ]
 
-ROOT_URLCONF = 'paradise-shop.urls'
+ROOT_URLCONF = 'shoppertize.urls'
 
 TEMPLATES = [
     {

@@ -54,7 +54,7 @@ class HomeView(ListView):
 
 class BestSellerView(ListView):
     model = Item
-    paginate_by = 1
+    paginate_by = 8
     template_name = "bestseller.html"
     
     def get_context_data(self, **kwargs):
@@ -62,8 +62,7 @@ class BestSellerView(ListView):
         context["categories"] = CATEGORY_CHOICES
         return context
     
-
-
+    
 def search(request):
     try:
         query = request.GET.get('q')

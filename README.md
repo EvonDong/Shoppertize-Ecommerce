@@ -1,4 +1,4 @@
-# Paradise Shop - Django Ecommerce Project
+# Shoppertize - Django Ecommerce Project
 
 ## About
 
